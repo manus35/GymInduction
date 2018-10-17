@@ -7,6 +7,40 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
+
+        <Label Name="lblHeading" 
+               Grid.Row="0" Grid.Column="0" 
+               HorizontalAlignment="Center" FontSize="20" 
+               Content="Please login to access the Application" 
+               Grid.ColumnSpan="3"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Username" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Password" />
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <TextBox Name="tbxUsername" Grid.Row="1" Grid.Column="1" />
+        <PasswordBox Name="tbxPassword" Grid.Row="2" Grid.Column="1" />
+         </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="right">
+            <Button Name="btnClose" Content="Close" Height="26" Width="130" Margin="10,1"/>
+            <Button Name="btnOk" Content="Ok" Height="26" Width="130" Margin="10,1"/>
+           
+            </StackPanel>
+
+        <Image Grid.Row="1" Grid.Column="2" Source="images/gym.jpg" Margin="20" Grid.RowSpan="3" Stretch="None"/>
+
     </Grid>
 </Window>
